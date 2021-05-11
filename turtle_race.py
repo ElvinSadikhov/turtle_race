@@ -40,11 +40,10 @@ def race(colours):
     while True:
         for racer in turtles:
             racer.forward(randint(1,20))
-        x,y=racer.pos()
-        if y>=HEIGHT/2:
-            break
-    sleep(2)
-    return colours[turtles.index(racer)]
+            x,y=racer.pos()
+            if y>=HEIGHT/2:
+                sleep(2)
+                return colours[turtles.index(racer)]
 
 turtlenum = intro()
 create_screen()
